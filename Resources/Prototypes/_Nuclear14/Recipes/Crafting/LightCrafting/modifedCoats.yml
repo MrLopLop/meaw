@@ -1,0 +1,8 @@
+- type: lightCraftingRecipe
+  id:
+  results:
+    -
+  steps:
+    firstIngredient:
+    secondIngredient:
+    time: 5
