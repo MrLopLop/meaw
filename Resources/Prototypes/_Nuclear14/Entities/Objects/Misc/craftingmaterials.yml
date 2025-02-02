@@ -8,6 +8,7 @@
   - type: Sprite
     sprite: _Nuclear14/Objects/Misc/crafting_material.rsi
     state: radscorpiontail
+  - type: Craftable
   - type: SolutionContainerManager
     solutions:
       food:
@@ -39,6 +40,7 @@
   - type: Material
   - type: Item
     size: Normal
+  - type: Craftable
 
 - type: entity
   parent: N14MaterialBaseHide
@@ -61,6 +63,7 @@
     - hide_brahmin_1
     - hide_brahmin_2
   - type: Appearance
+  - type: Craftable
 
 - type: entity
   parent: N14MaterialBrahminHide
@@ -101,7 +104,7 @@
   - type: PhysicalComposition
     materialComposition:
       RawLeather: 600
-    
+
 - type: entity
   parent: BaseItem
   id: N14MaterialHideGecko
@@ -111,19 +114,20 @@
   - type: Sprite
     sprite: _Nuclear14/Objects/Misc/mob_drops.rsi
     state: hide_gecko
+  - type: Craftable
   - type: Tag
     tags:
       - RawLeather
   - type: PhysicalComposition
     materialComposition:
       RawLeather: 600
-    
+
 - type: entity
   parent: N14MaterialHideGecko
   id: N14MaterialHideGeckoFire
   name: fire gecko hide
   description: A thick flame resistant hide from a fire gecko.
-  
+
 - type: entity
   parent: N14MaterialHideGecko
   id: N14MaterialHideGeckoGolden

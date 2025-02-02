@@ -32,10 +32,11 @@
   - type: DamageOtherOnHit
     damage:
       types:
-        Blunt: 14  
+        Blunt: 14
   - type: Item
     heldPrefix: ingot_lead
   - type: Appearance
+  - type: Craftable
   - type: Extractable
     grindableSolutionName: lead
   - type: SolutionContainerManager
@@ -94,6 +95,7 @@
   - type: Item
     heldPrefix: ingot_aluminum
   - type: Appearance
+  - type: Craftable
   - type: Extractable
     grindableSolutionName: aluminum
   - type: SolutionContainerManager
@@ -141,6 +143,7 @@
   - type: Item
     heldPrefix: ingot_copper
   - type: Appearance
+  - type: Craftable
   - type: Extractable
     grindableSolutionName: copper
   - type: SolutionContainerManager
@@ -188,6 +191,7 @@
   - type: Item
     heldPrefix: ingot_brass
   - type: Appearance
+  - type: Craftable
   - type: Extractable
     grindableSolutionName: brass
   - type: SolutionContainerManager
@@ -237,6 +241,7 @@
   - type: Item
     heldPrefix: ingot_gold
   - type: Appearance
+  - type: Craftable
   - type: Extractable
     grindableSolutionName: gold
   - type: SolutionContainerManager
@@ -284,6 +289,7 @@
   - type: Item
     heldPrefix: ingot_iron
   - type: Appearance
+  - type: Craftable
   - type: Extractable
     grindableSolutionName: iron
   - type: SolutionContainerManager
@@ -331,6 +337,7 @@
   - type: Item
     heldPrefix: ingot_silver
   - type: Appearance
+  - type: Craftable
   - type: Extractable
     grindableSolutionName: silver
   - type: SolutionContainerManager

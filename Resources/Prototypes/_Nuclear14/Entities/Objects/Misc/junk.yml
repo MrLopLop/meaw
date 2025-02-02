@@ -73,6 +73,7 @@
   id: N14JunkItemBaseGlass # Parent anything made from glass to this.
   abstract: true
   components:
+  - type: Craftable
   - type: WelderRefinable
     refineResult:
     - id: SheetGlass1
@@ -85,6 +86,7 @@
   id: N14JunkItemBaseWood # Parent anything made from wood to this.
   abstract: true
   components:
+  - type: Craftable
   - type: WelderRefinable
     refineResult:
     - id: MaterialWoodPlank1
@@ -97,6 +99,7 @@
   id: N14JunkItemBasePlastic # Parent anything made from plastic to this.
   abstract: true
   components:
+  - type: Craftable
   - type: WelderRefinable
     refineResult:
     - id: SheetPlastic1
@@ -109,6 +112,7 @@
   id: N14JunkItemBaseMetal # Parent anything made from metal to this.
   abstract: true
   components:
+  - type: Craftable
   - type: WelderRefinable
     refineResult:
     - id: SheetSteel1
@@ -121,6 +125,7 @@
   id: N14JunkItemBaseAluminum # Parent anything made from aluminum to this.
   abstract: true
   components:
+  - type: Craftable
   - type: WelderRefinable
     refineResult:
     - id: N14IngotAluminum1
@@ -133,6 +138,7 @@
   id: N14JunkItemBaseLead # Parent anything made from lead to this.
   abstract: true
   components:
+  - type: Craftable
   - type: WelderRefinable
     refineResult:
     - id: N14IngotLead1
@@ -145,6 +151,7 @@
   id: N14JunkItemBaseContainer # Parent anything made unbreakable liquid holder to this.
   abstract: true
   components:
+  - type: Craftable
   - type: WelderRefinable
     refineResult:
     - id: SheetPlastic1
@@ -877,6 +884,7 @@
   - type: Sprite
     state: resistor_1
   - type: Material
+  - type: Craftable
   - type: PhysicalComposition
     materialComposition:
       Circuitry: 20

@@ -12,6 +12,7 @@
     sprite: _Nuclear14/Objects/Misc/materials.rsi
   - type: Material
   - type: Appearance
+  - type: Craftable
 
 - type: entity
   parent: N14MaterialBase
@@ -25,6 +26,7 @@
     solution: powder
   - type: Extractable
     grindableSolutionName: powder
+  - type: Craftable
 
 # Other
 #MARK: Gunpowder
@@ -443,6 +445,7 @@
   - type: Tag
     tags:
     - Scrap
+  - type: Craftable
 
 - type: entity
   parent: N14ScrapBase
