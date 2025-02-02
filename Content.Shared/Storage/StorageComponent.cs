@@ -131,6 +131,15 @@ namespace Content.Shared.Storage
         [DataField]
         public bool HideStackVisualsWhenClosed = true;
 
+        // N14-changes-start
+        /// <summary>
+        /// Makes crafting button visible
+        /// This needed to make a crafting bench xd
+        /// </summary>
+        [DataField("craft")]
+        public bool Craft;
+        // N14-changes-ends
+
         [Serializable, NetSerializable]
         public enum StorageUiKey : byte
         {

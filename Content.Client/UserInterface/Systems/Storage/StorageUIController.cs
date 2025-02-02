@@ -3,6 +3,7 @@ using Content.Client.Examine;
 using Content.Client.Hands.Systems;
 using Content.Client.Interaction;
 using Content.Client.Storage.Systems;
+using Content.Shared.Crafting.Events; // N14-Changes
 using Content.Client.UserInterface.Systems.Hotbar.Widgets;
 using Content.Client.UserInterface.Systems.Storage.Controls;
 using Content.Client.Verbs.UI;
@@ -216,11 +217,13 @@ public sealed class StorageUIController : UIController, IOnSystemChanged<Storage
         {
             container.OnPiecePressed -= OnPiecePressed;
             container.OnPieceUnpressed -= OnPieceUnpressed;
+            container.OnCraftButtonPressed -= OnCraftButtonPressed; // N14-Changes
         }
 
         _container = container;
         container.OnPiecePressed += OnPiecePressed;
         container.OnPieceUnpressed += OnPieceUnpressed;
+        container.OnCraftButtonPressed += OnCraftButtonPressed; // N14 N14-Changes
 
         if (!StaticStorageUIEnabled)
             _container.Orphan();
@@ -386,4 +389,13 @@ public sealed class StorageUIController : UIController, IOnSystemChanged<Storage
         if (!StaticStorageUIEnabled && _container?.Parent != null && _lastContainerPosition != null)
             _lastContainerPosition = _container.GlobalPosition;
     }
+    // N14-changes-start
+    private void OnCraftButtonPressed()
+    {
+        if (_container?.StorageEntity is not { } storageEnt)
+            return;
+        _entity.RaisePredictiveEvent(new CraftStartedEvent(
+            _entity.GetNetEntity(storageEnt)));
+    }
+    // N14-changes-end
 }

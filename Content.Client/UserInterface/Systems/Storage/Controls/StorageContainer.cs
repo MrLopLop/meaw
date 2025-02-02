@@ -51,6 +51,12 @@ public sealed class StorageContainer : BaseWindow
     private readonly string _sidebarFatTexturePath = "Storage/sidebar_fat";
     private Texture? _sidebarFatTexture;
 
+    // N14-Changes-Start
+    public event Action? OnCraftButtonPressed;
+    private readonly string _craftTexturePath = "Storage/craft";
+    private Texture? _craftTexture;
+    // N14-Changes-End
+
     public StorageContainer()
     {
         IoCManager.InjectDependencies(this);
@@ -121,6 +127,7 @@ public sealed class StorageContainer : BaseWindow
         _sidebarMiddleTexture = Theme.ResolveTextureOrNull(_sidebarMiddleTexturePath)?.Texture;
         _sidebarBottomTexture = Theme.ResolveTextureOrNull(_sidebarBottomTexturePath)?.Texture;
         _sidebarFatTexture = Theme.ResolveTextureOrNull(_sidebarFatTexturePath)?.Texture;
+        _craftTexture = Theme.ResolveTextureOrNull(_craftTexturePath)?.Texture; // N14-Changes
     }
 
     public void UpdateContainer(Entity<StorageComponent>? entity)
@@ -145,6 +152,33 @@ public sealed class StorageContainer : BaseWindow
         #region Sidebar
         _sidebar.Children.Clear();
         _sidebar.Rows = boundingGrid.Height + 1;
+
+        // N14-Changes-Start
+        var craftButton = new TextureButton
+        {
+            TextureNormal = _craftTexture,
+            Scale = new Vector2(2, 2),
+            Visible = comp.Craft,
+        };
+        craftButton.OnPressed += _ => OnCraftButtonPressed?.Invoke();
+
+        var craftContainer = new BoxContainer
+        {
+            Children =
+            {
+                new TextureRect
+                {
+                    Texture = boundingGrid.Height == 1 ? _sidebarBottomTexture : _sidebarMiddleTexture,
+                    TextureScale = new Vector2(2, 2),
+                    Children =
+                    {
+                        craftButton
+                    }
+                }
+            }
+        };
+        // N14-Changes-End
+
         var exitButton = new TextureButton
         {
             TextureNormal = _entity.System<StorageSystem>().OpenStorageAmount == 1
@@ -183,6 +217,12 @@ public sealed class StorageContainer : BaseWindow
             }
         };
         _sidebar.AddChild(exitContainer);
+
+        // N14-Changes-Start
+        if (comp.Craft)
+            _sidebar.AddChild(craftContainer);
+        // N14-Changes-End
+
         for (var i = 0; i < boundingGrid.Height - 1; i++)
         {
             _sidebar.AddChild(new TextureRect
