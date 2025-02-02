@@ -217,13 +217,9 @@ public sealed class StorageContainer : BaseWindow
             }
         };
         _sidebar.AddChild(exitContainer);
+        _sidebar.AddChild(craftContainer); // N14-Changes
 
-        // N14-Changes-Start
-        if (comp.Craft)
-            _sidebar.AddChild(craftContainer);
-        // N14-Changes-End
-
-        for (var i = 0; i < boundingGrid.Height - 1; i++)
+        for (var i = 0; i < boundingGrid.Height - 2; i++) // N14-Changes
         {
             _sidebar.AddChild(new TextureRect
             {
@@ -232,14 +228,17 @@ public sealed class StorageContainer : BaseWindow
             });
         }
 
-        if (boundingGrid.Height > 0)
+        if (boundingGrid.Height != 1) // N14-Changes-Start
         {
-            _sidebar.AddChild(new TextureRect
+            if (boundingGrid.Height > 0)
             {
-                Texture = _sidebarBottomTexture,
-                TextureScale = new Vector2(2, 2),
-            });
-        }
+                _sidebar.AddChild(new TextureRect
+                {
+                    Texture = _sidebarBottomTexture,
+                    TextureScale = new Vector2(2, 2),
+                });
+            }
+        } // N14-Changes-End
 
         #endregion
 
