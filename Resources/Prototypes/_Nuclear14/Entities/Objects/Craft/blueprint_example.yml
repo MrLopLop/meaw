@@ -1,0 +1,18 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: N14BaseBlueprint
+  suffix: N14, craft
+  components:
+    - type: Sprite
+      state: blueprint
+      sprite: _Nuclear14/Objects/Misc/blueprint.rsi
+    - type: Craftable
+
+- type: entity
+  parent: N14BaseBlueprint
+  id: N14ClothingOuterPowerArmorT45Blueprint
+  name: blueprint t-45 power armor
+  components:
+    - type: STBlueprint
+      blueprint: N14ClothingOuterPowerArmorT45Recipe

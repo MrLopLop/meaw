@@ -36,6 +36,7 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: N14FootstepPowerArmor
+  - type: Craftable
 
 - type: entity
   parent: N14ClothingOuterPowerArmorT45
@@ -69,6 +70,7 @@
   - type: Reflect
     reflectProb: 0.1
     spread: 150
+  - type: Craftable
 
 - type: entity
   parent: N14ClothingOuterPowerArmorT45
@@ -102,6 +104,7 @@
   - type: Reflect
     reflectProb: 0.1
     spread: 150
+  - type: Craftable
 
 - type: entity
   parent: N14ClothingOuterPowerArmorT60
@@ -151,6 +154,7 @@
   - type: Reflect
     reflectProb: 0.15
     spread: 150
+  - type: Craftable
 
 - type: entity
   parent: N14ClothingOuterPowerArmorAdvanced1

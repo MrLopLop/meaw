@@ -25,7 +25,7 @@
 
 - type: Tag
   id: Jam
-  
+
 - type: Tag
   id: Magazine
 
@@ -292,7 +292,7 @@
 
 - type: Tag
   id:  SpeedLoader
-  
+
 - type: Tag
   id: Magazine308M60Box
 
@@ -372,3 +372,7 @@
 
 - type: Tag
   id: NightstalkerPelt
+
+#MARK: Tools
+- type: Tag
+  id: N14Welder

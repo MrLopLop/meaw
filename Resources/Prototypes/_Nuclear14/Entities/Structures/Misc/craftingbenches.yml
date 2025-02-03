@@ -34,6 +34,51 @@
   - type: ApcPowerReceiver
     needsPower: false
 
+- type: Tag # This Tag we use in code to find all ST workbenches. Don't forget to add it on them and if you rename, rename in code as well
+  id: STWorkbench
+
+- type: entity
+  parent: BaseStructure
+  id: N14STWorkbenchBase
+  name: turning machine
+  description: The device used for processing parts is mainly made of metal.
+  components:
+    - type: Tag
+      tags:
+        - STWorkbench
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+    - type: UserInterface
+      interfaces:
+        enum.StorageUiKey.Key:
+          type: StorageBoundUserInterface
+    - type: InteractionOutline
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+              bounds: "-0.1,-0.1,1,0.3"
+          density: 190
+          mask:
+          - MachineMask
+          layer:
+          - MachineLayer
+    - type: Clickable
+    - type: Sprite
+      sprite: _Nuclear14/Structures/Misc/worktables.rsi
+      state: worktable_1
+      offset: 0.5, 0
+    - type: Transform
+      noRot: true
+    - type: Craftable
+    - type: Storage
+      craft: true
+      maxItemSize: Ginormous
+      grid:
+        - 0,0,12,12
+
 - type: entity
   parent: N14WorkbenchBase
   id: N14WorkbenchWeaponbench
