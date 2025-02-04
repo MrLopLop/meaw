@@ -1,0 +1,14 @@
+- type: entity
+  parent: N14ClothingOuterPowerArmorT51
+  id: N14ClothingOuterPowerArmorT51China
+  name: китайская силовая броня
+  description: Модель Т-51, на обратной стороне виднеется потёртая надпись ** Сделано в китае **
+  components:
+  - type: Sprite
+    sprite: Corvax/Clothing/OuterClothing/PowerArmor/t51china.rsi
+  - type: Clothing
+    sprite: Corvax/Clothing/OuterClothing/PowerArmor/t51china.rsi
+    equipDelay: 3
+    unequipDelay: 6
+  - type: ToggleableClothing
+    clothingPrototype: N14ClothingHeadHelmetPowerArmorT51China
