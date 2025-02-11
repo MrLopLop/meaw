@@ -51,7 +51,7 @@ public sealed class STBlueprintSystem : EntitySystem
         }
         AddDescriptions();
         SubscribeLocalEvent<STBlueprintComponent, ExaminedEvent>(OnBlueprintExamine);
-        SubscribeLocalEvent<STBlueprintComponent, ComponentStartup>(OnComponentStartup);
+        // SubscribeLocalEvent<STBlueprintComponent, ComponentStartup>(OnComponentStartup); N14-changes
     }
 
     /// <summary>
@@ -68,6 +68,7 @@ public sealed class STBlueprintSystem : EntitySystem
 
         args.PushMarkup(description);
     }
+    /* N14-changes
     /// <summary>
     /// Для того чтобы поменять имя у компонента автоматически, чтобы рецепты не устаревали. К сожалению,
     /// если рецепт расположен в интерфейсе торговца он будет показывать имя из yml. Но хотя бы если на полу
@@ -83,6 +84,7 @@ public sealed class STBlueprintSystem : EntitySystem
 
         _metaSystem.SetEntityName(uid, name);
     }
+    */
 
     private void AddDescriptions()
     {

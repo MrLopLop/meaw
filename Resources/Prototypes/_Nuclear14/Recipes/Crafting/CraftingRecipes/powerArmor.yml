@@ -1,7 +1,7 @@
 - type: craftRecipe
-  id: N14ClothingOuterPowerArmorT45Recipe
+  id: N14ClothingOuterPowerArmorT45RecipeRestoration
   resultProtos:
-    - N14ClothingOuterPowerArmorT45
+  - N14ClothingOuterPowerArmorT45
   requiredWorkbench: N14STWorkbenchBase
   craftTime: 10
   items:
@@ -19,3 +19,29 @@
       amount: 4
     N14IngotIron1:
       amount: 10
+
+- type: craftRecipe
+  id: N14ClothingOuterPowerArmorT45NCRRecipe
+  resultProtos:
+  - N14ClothingOuterPowerArmorT45NCR
+  - N14JunkComponentScrew
+  - N14JunkComponentScrew
+  - N14JunkComponentGearSmall
+  - N14JunkComponentGearSmall
+  requiredWorkbench: N14STWorkbenchBase
+  craftTime: 10
+  items:
+    N14ClothingOuterPowerArmorT45NCRBlueprint:
+      amount: 1
+    N14ClothingOuterPowerArmorT45:
+      amount: 1
+    N14Welder:
+      amount: 1
+      catalyzer: true
+      tag: true
+    N14Screwdriver:
+      amount: 1
+      catalyzer: true
+    N14Wrench:
+      amount: 1
+      catalyzer: true

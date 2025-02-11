@@ -1,0 +1,8 @@
+- type: lightCraftingRecipe
+  id: N14ClothingOuterPowerArmorT60Tesla
+  results:
+    - N14ClothingOuterPowerArmorT60Tesla
+  steps:
+    firstIngredient: N14PowerCellFusion
+    secondIngredient: N14ClothingOuterPowerArmorT60
+    time: 5

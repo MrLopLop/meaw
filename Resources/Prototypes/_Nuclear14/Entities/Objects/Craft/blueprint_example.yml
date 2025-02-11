@@ -12,7 +12,15 @@
 - type: entity
   parent: N14BaseBlueprint
   id: N14ClothingOuterPowerArmorT45Blueprint
-  name: blueprint t-45 power armor
+  name: blueprint restoration t-45 power armor
   components:
     - type: STBlueprint
-      blueprint: N14ClothingOuterPowerArmorT45Recipe
+      blueprint: N14ClothingOuterPowerArmorT45RecipeRestoration
+
+- type: entity
+  parent: N14BaseBlueprint
+  id: N14ClothingOuterPowerArmorT45NCRBlueprint
+  name: blueprint removal servo drives of the T-45 power armor
+  components:
+    - type: STBlueprint
+      blueprint: N14ClothingOuterPowerArmorT45NCRRecipe
